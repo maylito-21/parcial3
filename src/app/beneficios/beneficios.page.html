@@ -1,0 +1,49 @@
+<ion-header class="a">
+  <ion-toolbar>
+    <img src="http://surl.li/alksi" class="img-fluid" width="90px" height="90px" alt="">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+<div>
+  <h1 class="ion-margin">Chivo Wallet + </h1>
+  <h1 class="ion-margin">Beneficio</h1>
+
+  <!-- List of Text Items -->
+<div class="ion-margin" *ngFor="let item of barridos">
+  <ion-list class="c">
+    <ion-item class="c">
+      <ion-icon class="w" name="{{ item.logo }}"></ion-icon>
+      <p class="c">{{ item.descripcion }}</p>
+    </ion-item>
+  </ion-list>
+</div>
+
+</div>
+<div class="b">
+  <h1><strong>Vias de contacto</strong></h1>
+  <p class="x">_________</p>
+  <h6 class="c">¡Puedes contactarnos para aclarar tus dudas sobre la chivo wallet por cualquiera de estos canales!</h6><br><br>
+  <ion-card>
+    <ion-icon class="w" name="mail-outline"></ion-icon>
+    <h1><strong>Soporte vía correo electrónico</strong> </h1>
+      <h6>Envíanos un e-mail a soporte@chivowallet.com y uno de nuestros agentes atenderá tu solicitud a la brevedad.</h6>
+      <ion-button color="primary"[routerLink]="['/beneficios']">Escribenos</ion-button><br><br>
+    </ion-card><br>
+
+    <ion-card>
+      <ion-icon class="w" name="calculator-outline"></ion-icon>
+      <h1><strong>Atención para Cajeros</strong> </h1>
+        <h6>Todos los días de 6:00 am a 10:00 pm nuestro equipo estará listo para brindarte atención personalizada y solventar cualquier inquietud relacionada a nuestros cajeros.</h6>
+        <ion-button color="primary"[routerLink]="['/beneficios']">Escribenos</ion-button><br><br>
+      </ion-card><br><br>
+      <div>
+        <ion-img class="ion-padding" *ngFor="let foto of fotos" [src]="foto.src"></ion-img>
+      </div><br><br>
+     
+</div>
+</ion-content>
+

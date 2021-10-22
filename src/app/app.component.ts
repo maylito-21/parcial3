@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'home', url: '/home', icon: 'home' },
+    { title: 'Inicio', url: '/home', icon: '' },
+    { title: 'Beneficios', url: '/beneficios', icon: '' },
+    { title: '¿Que es Bitcoin?', url: '/bitcoin', icon: '' },
+    { title: 'Descarga', url: '/descarga', icon: '' },
     //{ title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
     //{ title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
     //{ title: 'Archived', url: '/folder/Archived', icon: 'archive' },
@@ -14,5 +18,10 @@ export class AppComponent {
     //{ title: 'Spam', url: '/folder/Spam', icon: 'warning' },
   ];
   //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  constructor( private menu: MenuController) {}
+
+  closeMenu() {
+    this.menu.close('end');
+  }
 }
+

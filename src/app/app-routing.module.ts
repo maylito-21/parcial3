@@ -14,6 +14,18 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'beneficios',
+    loadChildren: () => import('./beneficios/beneficios.module').then( m => m.BeneficiosPageModule)
+  },
+  {
+    path: 'descarga',
+    loadChildren: () => import('./descarga/descarga.module').then( m => m.DescargaPageModule)
+  },
+  {
+    path: 'bitcoin',
+    loadChildren: () => import('./bitcoin/bitcoin.module').then( m => m.BitcoinPageModule)
   }
 ];
 
